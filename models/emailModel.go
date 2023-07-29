@@ -7,11 +7,12 @@ import (
 )
 
 type Email struct {
-	ID        primitive.ObjectID `bson:"_id"`
-	Email     string             `json:"email" validate:"email,required"`
-	Transid   string             `json:"transid"`
-	Subject   string             `json:"subject"`
-	Otp       string             `json:"otp"`
+	ID         primitive.ObjectID `bson:"_id"`
+	Email      string             `json:"email" validate:"email,required"`
+	Transid    string             `json:"transid"`
+	Subject    string             `json:"subject"`
+	Otp        string             `json:"otp"`
 	Created_at time.Time          `json:"created_at"`
 	Updated_at time.Time          `json:"updated_at"`
+	Expires_at time.Time          `bson:"expires_at"`
 }
